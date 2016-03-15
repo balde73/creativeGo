@@ -1,0 +1,1021 @@
+/* Creative Composer - Balde73
+   v0.1
+   CSS Ionic Personalization
+   License: none (public domain)
+*/
+
+
+
+/* ------------------------------------------------------- *\
+---------------- RESET
+\* ------------------------------------------------------- */
+
+
+    /* RESET BY MEYERWEB */
+
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    * {
+        box-sizing    : inherit;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    *:before, *:after {
+        box-sizing: inherit;
+    }
+
+
+
+/* ------------------------------------------------------- *\
+---------------- my reset
+\* ------------------------------------------------------- */
+
+html {
+    font-family: "Open Sans", sans-serif;
+    box-sizing : border-box;
+}
+
+html, body{
+    margin:     0;
+    padding:    0;
+    font-size:  16px;
+    height:     100%;
+}
+
+a{
+    color:           inherit;
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+ul li{
+    list-style: none;
+}
+
+h5{
+    font-size:      inherit;
+    margin-bottom:  13px;
+    font-weight:    bolder;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------- *\
+------------------- STRUCTURE
+\* ------------------------------------------------- */
+
+.no-font-split, .split-box{
+    font-size: 0;
+}
+.split-box-middle .split{
+    vertical-align: middle;
+}
+.no-font-split > .split, .split-box > .split{
+    font-size: 16px;
+}
+
+.max-full{
+    max-width:  100%;
+}
+.all-height{
+    height:     100%;
+}
+.all-width{
+    width:      100%;
+}
+.all-height-width{
+    width:      100%;
+    height:     100%;
+}
+
+.split{
+    display: inline-block;
+    vertical-align: top;
+}
+.split1,    .splite-innner-1 > .split{
+	width:  100%;
+}
+.split70p{
+    width:  70%;
+}
+.split60p{
+    width:  60%;
+}
+.split50p,  .split2,    .splite-innner-2 > .split{
+	width:  50%;
+}
+.split40p{
+    width:  40%;
+}
+.split3,    .splite-innner-3 > .split{
+	width:  33.333%;
+}
+.split4,    .splite-innner-4 > .split{
+	width:  25%;
+}
+.split5,    .splite-innner-5 > .split{
+	width:  20%;
+}
+.split6,    .splite-innner-6 > .split{
+	width:  16.666%
+}
+.split8,    .splite-innner-8 > .split{
+	width:  12.5%;
+}
+.split10,   .splite-innner-10 > .split{
+	width:  10%;
+}
+.split20,   .splite-innner-20 > .split{
+	width:  5%;
+}
+
+
+@media screen and (max-width: 620px){
+
+	.msplit1, .msplite-innner-1 > .split{
+		width: 100%;
+	}
+	.msplit2, .msplite-innner-2 > .split{
+		width: 50%;
+	}
+	.msplit3, .msplite-innner-3 > .split{
+		width: 33.333%;
+	}
+	.msplit4, .msplite-innner-4 > .split{
+		width: 25%;
+	}
+	.msplit5, .msplite-innner-5 > .split{
+		width: 20%;
+	}
+	.msplit6, .msplite-innner-6 > .split{
+		width: 16.666%
+	}
+	.msplit8, .msplite-innner-8 > .split{
+		width: 12.5%;
+	}
+	.msplit10, .msplite-innner-10 > .split{
+		width: 10%;
+	}
+	.msplit20, .msplite-innner-20 > .split{
+		width: 5%;
+	}
+
+}
+
+
+.full-screen{
+    width:  95%;
+    margin: 0 auto;
+}
+
+.all-inside select, .all-inside input, .all-inside textarea, .all-inside label{
+    width: 100%;
+}
+
+.limitatore{
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.min-limitatore{
+    width: 95%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+
+/* navigator */
+.nav-side{
+    position: fixed;
+    height:   100%;
+    width:    280px;
+    z-index:  100;
+}
+
+.nav-side .nav-title{
+    height:     80px;
+}
+
+.nav-side .nav-title a{
+    display:     block;
+    font-size:   25px;
+    line-height: 40px;
+    height:      80px;
+    padding:     20px;
+}
+
+.nav-side .nav-title img{
+    display:    block;
+    height:     40px;
+}
+
+.nav-side .nav-subtitle{
+    height:      60px;
+    line-height: 60px;
+    font-size:   20px;
+    text-align:  center;
+}
+
+.nav-side .nav-ul{
+    overflow: auto;
+    height:   calc( 100% );
+}
+
+.has-nav-title.nav-side .nav-ul{
+    height:   calc( 100% - 80px );
+}
+
+.nav-side ul li{
+    cursor:    pointer;
+}
+
+.nav-side ul li a, .nav-side ul li span{
+    padding:         20px;
+    display:         block;
+    text-decoration: none;
+}
+
+
+/* has-nav-side */
+.has-nav-side{
+    margin-left: 280px;
+}
+
+.open-nav-side{
+    display: none;
+}
+
+@media screen and (max-width: 620px){
+    .nav-side{
+        display: none;
+        left:    -100%;
+        -webkit-transition: .4s left;
+    }
+
+    .has-nav-side{
+        margin-left: 0;
+    }
+
+    .open-nav-side{
+        display:            block;
+        position:           absolute;
+        top:                10px;
+        left:               10px;
+        cursor:             pointer;
+        padding:            10px;
+    }
+
+    .nav-side-open{
+        width:   90%;
+        left:    0;
+        display: block;
+    }
+}
+
+
+.selectable, input, textarea{
+    -webkit-user-select:    text;
+    -khtml-user-select:     text;
+    -moz-user-select:       text;
+    -ms-user-select:        text;
+    user-select:            text;
+    -webkit-touch-callout:  text;
+}
+
+.all-selectable, .all-selectable *{
+    -webkit-user-select:    all;
+    -khtml-user-select:     all;
+    -moz-user-select:       all;
+    -ms-user-select:        all;
+    user-select:            all;
+    -webkit-touch-callout:  all;
+}
+
+/* position */
+.anchor{
+    position: relative;
+}
+.ocean-floor{
+    position:   absolute;
+    bottom:     0;
+    left:       0;
+    width:      100%;
+}
+.sky{
+    position:   absolute;
+    top:        0;
+    left:       0;
+    width:      100%;
+}
+
+
+
+
+
+
+/* ------------------------------------------------ *\
+--------------------- COMPONENTS
+\* ------------------------------------------------ */
+
+
+/* INPUT */
+input, textarea, select{
+    box-shadow:     none;
+    outline:        none;
+    border:         1px solid rgba(0,0,0,.1);
+    padding:        5px;
+    color:          black;
+    height:         30px;
+}
+
+label{
+    margin-bottom:  5px;
+    display:        block;
+}
+
+/* BUTTON */
+.btn {
+    width:              100%;
+    margin:             0 auto;
+    display:            block;
+    text-align:         center;
+    background-color:   rgba(0,0,0,.2);
+    box-shadow:         0 0 2px rgba(0,0,0,.2);
+    text-transform:     uppercase;
+    cursor:             pointer;
+    color:              inherit;
+}
+
+.btn-inline{
+    display: inline-block;
+    width:   auto;
+    padding: 8px 16px;
+}
+
+.btn-light{
+    background:         transparent;
+    border-width:       1px;
+    border-style:       solid;
+}
+
+.btn-3d{
+    position:           relative;
+    box-shadow:         none;
+    width:              160px;
+}
+
+.btn-3d::after{
+    content:            "";
+    height:             1px;
+    width:              80%;
+    position:           absolute;
+    bottom:             2px;
+    left:               10%;
+    z-index:            -1;
+-webkit-box-shadow:     0 2px 12px 4px rgba(0,0,0,.2);
+   -moz-box-shadow:     0 2px 12px 4px rgba(0,0,0,.2);
+        box-shadow:     0 2px 12px 4px rgba(0,0,0,.2);
+}
+
+.btn a{
+}
+
+.btn-radius{
+    border-radius:      8px;
+}
+
+.btn-success{
+    color:            white;
+    background-color: #3DC929;
+}
+
+.btn-normal{
+    background-color: rgba(0,0,0,.1);
+}
+
+
+/* ICON */
+.icon{
+    text-align: center;
+}
+
+.icon-36{
+    font-size: 36px;
+}
+
+.icon-on-right-center{
+    position:   absolute;
+    right:      0;
+    top:        50%;
+}
+
+.icon-abs-40{
+    margin-top: -20px;
+    width:       40px;
+    height:      40px;
+    line-height: 40px;
+}
+
+
+
+/* LIST */
+ul.border-1 li{
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+ul.border-bottom li:first-child{
+    border-top: 0;
+}
+
+ul.border-bottom li:last-child{
+    border-bottom: 0;
+}
+
+/* TO DO insert animation */
+li.dropdown > ul{
+    display:     none;
+}
+
+li.dropdown-active > ul{
+    display:          block;
+    background-color: rgba(0,0,0,.15);
+}
+
+li.dropdown-active > span > i{
+    -webkit-transform:  rotateX(180deg); /* Safari */
+    transform:          rotateX(180deg);
+}
+
+
+/* mostra una freccia all'interno della lista */
+ul.arrow-list > li{
+    position:           relative;
+}
+
+ul.arrow-list > li::after{
+    content:            "";
+    position:           absolute;
+    height:             16px;
+    width:              16px;
+    top:                50%;
+    right:              15px;
+    margin-top:         -8px;
+    border-top:         2px solid rgba(0,0,0,.6);
+    border-right:       2px solid rgba(0,0,0,.6);
+    -webkit-transform:  rotateZ(45deg);
+}
+
+
+/* MODAL */
+.modal-container{
+    display:            none;
+    position:           fixed;
+    top:                0;
+    left:               0;
+    width:              100%;
+    height:             100%;
+    background-color:   rgba(0,0,0,.7);
+    z-index:            1000;
+}
+
+.modal{
+    display:            block;
+    margin:             0 auto;
+    margin-top:         10vh;
+    background-color:   white;
+}
+
+.modal textarea{
+    height: auto;
+}
+
+
+/* TOAST */
+#toast-box{
+    position:           fixed;
+    text-transform:     uppercase;
+    bottom:             0;
+    left:               0;
+    width:              100%;
+    color:              #ECFF50;
+    z-index:            1000;
+}
+
+.toast{
+    position:           absolute;
+    bottom:             -100px;
+    left:               0;
+    width:              100%;
+    padding:            15px 30px;
+    background-color:   rgb(40,40,40);
+
+-webkit-transition:     bottom .4s;
+   -moz-transition:     bottom .4s;
+    -ms-transition:     bottom .4s;
+     -o-transition:     bottom .4s;
+        transition:     bottom .4s;
+}
+
+/* CODE */
+.code{
+    padding:            20px;
+    background-color:   rgba(0,0,0,.8);
+    color:              rgba(255,255,255,.8);
+    letter-spacing:     1px;
+}
+
+.code-preview{
+    text-align:         center;
+    padding:            5px;
+    margin:             10px 0;
+    background-color:   rgba(0,0,0,.05);
+    border:             1px solid rgba(0,0,0,.1);
+}
+
+/* TABLE */
+.normal-table{
+    width: 100%;
+}
+
+.normal-table tr th{
+    padding: 10px 0;
+}
+
+.normal-table tr td{
+    padding: 5px 0;
+}
+
+/* CARD */
+.card{
+    background-color: white;
+    border-radius: 2px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-1:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+/* ------ */
+#velina{
+    position:           fixed;
+    top:                0;
+    left:               0;
+    width:              100%;
+    height:             100%;
+    background-color:   rgba(0,0,0,.8);
+    z-index:            99;
+}
+
+
+
+
+/* ------------------------------------------------ *\
+--------------------- TEXT LAYOUT --------------------
+\* ------------------------------------------------ */
+.paragraph{
+    line-height: 140%;
+    text-align:  justify;
+}
+
+.article .intro{
+    position:       relative;
+    padding-top:    14vh;
+    padding-bottom: 30px;
+}
+
+.article .intro h1{
+    padding:        10px 0;
+    font-size:      50px;
+}
+
+.article .intro h3{
+    line-height:    26px;
+    font-size:      24px;
+}
+
+
+/* ------------------------------------------------ *\
+---------------------- VARIABILI ---------------------
+\* ------------------------------------------------ */
+
+
+/* color */
+.Bgray{
+    background-color: #EEE;
+}
+
+.Bblue{
+    background-color: #536DFE;
+    color:            white;
+}
+.Bdark-smooth{
+    background: linear-gradient(to top, rgba(0,0,0,.80)0%, rgba(0,0,0,.40)45%, transparent 80%);
+    color:      white;
+}
+
+.Bwhite{
+    background-color: white;
+    color:            black;
+}
+
+.Bblack{
+    background-color: rgb(60,60,60);
+    color:            white;
+}
+
+.Bred{
+    background-color: #F85133;
+    color:            white;
+}
+
+.Byellow{
+    background-color: #ECFF50;
+    color:            black;
+}
+
+.Blight-gray{
+    background-color: rgb(240,240,240);
+    color:            black;
+}
+
+.Blight-blue{
+    background-color: rgb(127, 179, 254);
+    color:            white;
+}
+
+.Cred, .active-color{
+    color:            #F85133;
+    border-color:     #F85133;
+}
+.Cwhite{
+    color:            white;
+}
+.Cblue{
+    color:            #536DFE;
+}
+.Cyellow{
+    color:            #ECFF50;
+}
+.Clight-blue{
+    color: rgb(127, 179, 254);
+}
+
+
+.border-red{
+    border-color:     #F85133;
+}
+.border-blue{
+    border-color:     #536DFE;
+}
+.border-green{
+    border-color:     #A9DE71;
+}
+
+
+/* ------------------------------------------------- *\
+----------------------- DESIGN
+\* ------------------------------------------------- */
+
+
+.space5{
+    margin-top:         5px;
+    margin-bottom:      5px;
+}
+.space10{
+    margin-top:         10px;
+    margin-bottom:      10px;
+}
+
+.space20{
+    margin-top:         20px;
+    margin-bottom:      20px;
+}
+
+.space40{
+    margin-top:         40px;
+    margin-bottom:      40px;
+}
+
+.darker1{
+    background-color: rgba(0,0,0,.2);
+}
+
+.darker2{
+    background-color: rgba(0,0,0,.2);
+}
+
+.only-mob{
+    display:    none;
+}
+
+.block{
+    display:    block;
+}
+.hide{
+    display:    none;
+}
+
+.font{
+    font-size: 16px;
+}
+.no-font{
+    font-size: 0;
+}
+
+.font200, .big-font{
+    font-size: 200%;
+}
+.font150{
+    font-size: 150%;
+}
+.font120{
+    font-size: 120%;
+}
+.font100, .normal-font{
+    font-size: 100%;
+}
+.font90{
+    font-size: 90%;
+}
+.font80, .small-font{
+    font-size: 80%;
+}
+.font70, .x-small-font{
+    font-size: 70%;
+}
+
+.q40{
+    height: 40px;
+    width:  40px;
+}
+.q50{
+    height: 50px;
+    width:  50px;
+}
+.q60{
+    height: 60px;
+    width:  60px;
+}
+.q70{
+    height: 70px;
+    width:  70px;
+}
+.q80{
+    height: 80px;
+    width:  80px;
+}
+.q100{
+    height: 100px;
+    width:  100px;
+}
+.q120{
+    height: 120px;
+    width:  120px;
+}
+.q150{
+    height: 150px;
+    width:  150px;
+}
+.q200{
+    height: 200px;
+    width:  200px;
+}
+
+.padd2, ul.padd2 li, table.padd2 td{
+    padding: 2px;
+}
+.padd5, ul.padd5 li, table.padd5 td{
+    padding: 5px;
+}
+.padd10, ul.padd10 li, table.padd10 td{
+    padding: 10px;
+}
+.padd20, ul.padd20 li, table.padd20 td{
+    padding: 20px;
+}
+
+.paddTB2, ul.paddTB2 li, table.paddTB2 td{
+    padding-top:    2px;
+    padding-bottom: 2px;
+}
+.paddTB5, ul.paddTB5 li, table.paddTB5 td{
+    padding-top:    5px;
+    padding-bottom: 5px;
+}
+.paddTB10, ul.paddTB10 li, table.paddTB10 td{
+    padding-top:    10px;
+    padding-bottom: 10px;
+}
+.paddTB15, ul.paddTB15 li, table.paddTB15 td{
+    padding-top:    15px;
+    padding-bottom: 15px;
+}
+.paddTB20, ul.paddTB20 li, table.paddTB20 td{
+    padding-top:    20px;
+    padding-bottom: 20px;
+}
+.paddTB50, ul.paddTB50 li, table.paddTB50 td{
+    padding-top:    50px;
+    padding-bottom: 50px;
+}
+
+.paddLR5, ul.paddLR5 li, table.paddLR5 td{
+    padding-left:   5px;
+    padding-right:  5px;
+}
+
+.paddLR10, ul.paddLR10 li, table.paddLR10 td{
+    padding-left:   10px;
+    padding-right:  10px;
+}
+.paddLR20, ul.paddLR20 li, table.paddLR20 td{
+    padding-left:   20px;
+    padding-right:  20px;
+}
+.paddLR50, ul.paddLR50 li, table.paddLR50 td{
+    padding-left:   50px;
+    padding-right:  50px;
+}
+
+.paddT60, ul.paddT60 li, table.paddT60 td{
+    padding-top: 60px;
+}
+
+.marg10{
+    margin: 10px;
+}
+.marg20{
+    margin: 20px;
+}
+
+
+.op8{
+    opacity: .8;
+}
+.op7{
+    opacity: .7;
+}
+.op6{
+    opacity: .6;
+}
+.op5{
+    opacity: .5;
+}
+.op4{
+    opacity: .4;
+}
+.op3{
+    opacity: .3;
+}
+.op2{
+    opacity: .2;
+}
+
+.radius10{
+    border-radius: 10px;
+}
+.radius50{
+    border-radius: 50px;
+}
+.radius-round, .round{
+    border-radius: 100%;
+}
+
+.no-overflow, .no-over{
+    overflow:   hidden;
+}
+
+.upper{
+    text-transform: uppercase;
+}
+.wb{
+    font-weight: bolder;
+}
+
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
+.space-line{
+    border-bottom: 1px solid gray;
+    border-color:  rgba(0,0,0,.1);
+}
+
+@media screen and (max-width: 620px){
+    .only-mob{
+        display:   block;
+    }
+
+    .no-mob{
+        display:   none;
+    }
+
+    .article .intro{
+        padding-top:   60px;
+    }
+}
+
+
+/* ------------------------------------------------- *\
+------------------- I WILL FIX THIS
+\* ------------------------------------------------- */
+
+/* ul and table only transfert properties! */
+ul, table{
+    padding:    0 !important;
+    margin:     0 !important;
+}
