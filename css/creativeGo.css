@@ -800,6 +800,9 @@ ul.arrow-list > li::after{
 ----------------------- DESIGN
 \* ------------------------------------------------- */
 
+.space{
+    height:             1px;
+}
 
 .space5{
     margin-top:         5px;
