@@ -2,13 +2,13 @@ $(document).ready(function(){
 
 	$("body").on('click', ".open-nav-side", function(){
 		$(" <div id='velina' class='close-nav-side Bblack op8'></div> ").appendTo("body")
-		$(".nav-side").show();
-		setTimeout(function(){$(".nav-side").addClass("nav-side-open")}, 20);
+		$(".nav-side").show()
+		setTimeout(function(){$(".nav-side").addClass("nav-side-open")}, 20)
 	});
 
 	$("body").on('click', '.close-nav-side', function(){
 		$(".nav-side").removeClass("nav-side-open")
-		$("#velina").remove();
+		$("#velina").remove()
 	});
 
 
@@ -123,31 +123,31 @@ function copyInModal(){
 
 
 var tmpl_toast = '<div class="toast"> STRING_TOAST </div>'
-var animation_delay = 450+100;
+var animation_delay = 450+100
 function toast( stringa, timeout=200, add_class="" ){
 
-	timeout = (timeout >=200 ) ? timeout : 200;
+	timeout = (timeout >=200 ) ? timeout : 200
 
-	var toast = tmpl_toast.replace("STRING_TOAST", stringa);
+	var toast = tmpl_toast.replace("STRING_TOAST", stringa)
 
 	//creo il container se non esiste
 	if( $("#toast-box").length == 0 ){
-		$( '<div id="toast-box"></div>' ).appendTo("body");
+		$( '<div id="toast-box"></div>' ).appendTo("body")
 	}
 
 	// creo il toast
-	var myToast = $( toast );
+	var myToast = $( toast )
 	myToast	.addClass( add_class )
-			.appendTo("#toast-box");
+			.appendTo("#toast-box")
 
 	// animazione show
 	window.setTimeout(function(){
-		myToast.css("bottom", "0");
-	}, 10);
+		myToast.css("bottom", "0")
+	}, 10)
 
 	// animazione hide
 	window.setTimeout(function(){
-		myToast.css("bottom", "-100px");
-		window.setTimeout(function(){ myToast.remove() }, animation_delay);
+		myToast.css("bottom", "-100px")
+		window.setTimeout(function(){ myToast.remove() }, animation_delay)
 	}, timeout+animation_delay)
 }
