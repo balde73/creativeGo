@@ -1,0 +1,36 @@
+{
+  "name": "creative-go",
+  "version": "1.0.0",
+  "description": "A simple library to design sites quickly",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "min": "gulp min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balde73/creativeGo.git"
+  },
+  "keywords": [
+    "library",
+    "balde73",
+    "creativego",
+    "css",
+    "design"
+  ],
+  "author": "Balde73",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/balde73/creativeGo/issues"
+  },
+  "homepage": "https://github.com/balde73/creativeGo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
+  }
+}

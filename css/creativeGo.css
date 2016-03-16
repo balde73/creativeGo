@@ -1,6 +1,6 @@
 /* Creative Composer - Balde73
    v0.1
-   CSS Ionic Personalization
+   CSS Library
    License: none (public domain)
 */
 
@@ -155,7 +155,7 @@ h5{
     display: inline-block;
     vertical-align: top;
 }
-.split1,    .splite-innner-1 > .split{
+.split1,    .split-box-1 > .split{
 	width:  100%;
 }
 .split70p{
@@ -164,62 +164,62 @@ h5{
 .split60p{
     width:  60%;
 }
-.split50p,  .split2,    .splite-innner-2 > .split{
+.split50p,  .split2,    .split-box-2 > .split{
 	width:  50%;
 }
 .split40p{
     width:  40%;
 }
-.split3,    .splite-innner-3 > .split{
+.split3,    .split-box-3 > .split{
 	width:  33.333%;
 }
-.split4,    .splite-innner-4 > .split{
+.split4,    .split-box-4 > .split{
 	width:  25%;
 }
-.split5,    .splite-innner-5 > .split{
+.split5,    .split-box-5 > .split{
 	width:  20%;
 }
-.split6,    .splite-innner-6 > .split{
+.split6,    .split-box-6 > .split{
 	width:  16.666%
 }
-.split8,    .splite-innner-8 > .split{
+.split8,    .split-box-8 > .split{
 	width:  12.5%;
 }
-.split10,   .splite-innner-10 > .split{
+.split10,   .split-box-10 > .split{
 	width:  10%;
 }
-.split20,   .splite-innner-20 > .split{
+.split20,   .split-box-20 > .split{
 	width:  5%;
 }
 
 
 @media screen and (max-width: 620px){
 
-	.msplit1, .msplite-innner-1 > .split{
+	.msplit1, .msplit-box-1 > .split{
 		width: 100%;
 	}
-	.msplit2, .msplite-innner-2 > .split{
+	.msplit2, .msplit-box-2 > .split{
 		width: 50%;
 	}
-	.msplit3, .msplite-innner-3 > .split{
+	.msplit3, .msplit-box-3 > .split{
 		width: 33.333%;
 	}
-	.msplit4, .msplite-innner-4 > .split{
+	.msplit4, .msplit-box-4 > .split{
 		width: 25%;
 	}
-	.msplit5, .msplite-innner-5 > .split{
+	.msplit5, .msplit-box-5 > .split{
 		width: 20%;
 	}
-	.msplit6, .msplite-innner-6 > .split{
+	.msplit6, .msplit-box-6 > .split{
 		width: 16.666%
 	}
-	.msplit8, .msplite-innner-8 > .split{
+	.msplit8, .msplit-box-8 > .split{
 		width: 12.5%;
 	}
-	.msplit10, .msplite-innner-10 > .split{
+	.msplit10, .msplit-box-10 > .split{
 		width: 10%;
 	}
-	.msplit20, .msplite-innner-20 > .split{
+	.msplit20, .msplit-box-20 > .split{
 		width: 5%;
 	}
 
@@ -524,8 +524,9 @@ ul.arrow-list > li::after{
     top:                50%;
     right:              15px;
     margin-top:         -8px;
-    border-top:         2px solid rgba(0,0,0,.6);
-    border-right:       2px solid rgba(0,0,0,.6);
+    opacity:            .4;
+    border-top:         2px solid;
+    border-right:       2px solid;
     -webkit-transform:  rotateZ(45deg);
 }
 
@@ -607,6 +608,43 @@ ul.arrow-list > li::after{
 
 .normal-table tr td{
     padding: 5px 0;
+}
+
+/* IMAGE AND TEXT */
+.image-text{
+    position:       relative;
+}
+
+.image-text img{
+    position:       absolute;
+    top:            0px;
+    left:           0px;
+}
+
+.image-text .text{
+    padding-left:   5px;
+}
+
+.image-text-40{
+    min-height:     40px;
+}
+.image-text-40 .text{
+    padding-left:   40px;
+}
+.image-text-40 img{
+    width:          40px;
+    height:         40px;
+}
+
+.image-text-100{
+    min-height:     100px;
+}
+.image-text-100{
+    padding-left:   100px;
+}
+.image-text-100 img{
+    width:          100px;
+    height:         100px;
 }
 
 /* CARD */
