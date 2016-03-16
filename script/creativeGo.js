@@ -124,8 +124,10 @@ function copyInModal(){
 
 var tmpl_toast = '<div class="toast"> STRING_TOAST </div>'
 var animation_delay = 450+100
-function toast( stringa, timeout=200, add_class="" ){
+function toast( stringa, timeout, add_class ){
 
+	timeout = timeout || 200
+	add_class = add_class || ""
 	timeout = (timeout >=200 ) ? timeout : 200
 
 	var toast = tmpl_toast.replace("STRING_TOAST", stringa)
