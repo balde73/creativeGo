@@ -9,6 +9,6 @@ CreativeGo
 Build
 ------
 ```
-npm install;
-npm run min;
+npm install
+npm run min
 ```
