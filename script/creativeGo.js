@@ -11,6 +11,12 @@ $(document).ready(function(){
 		$("#velina").remove()
 	});
 
+	// toggle class
+	$("body").on('click', '*[toggle-class]', function(){
+		var elem = $(this);
+		var class_to_toggle = elem.attr("toggle-class")
+		elem.toggleClass( class_to_toggle );
+	});
 
 	// funzione dropdown su liste
 	$("li.dropdown span").click(function(event){
