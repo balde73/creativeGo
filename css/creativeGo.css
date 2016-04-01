@@ -545,6 +545,8 @@ ul.arrow-list > li::after{
 
 .modal{
     display:            block;
+    width:              90%;
+    max-width:          700px;
     margin:             0 auto;
     margin-top:         10vh;
     background-color:   white;
@@ -920,6 +922,9 @@ ul.arrow-list > li::after{
 .padd20, ul.padd20 li, table.padd20 td{
     padding: 20px;
 }
+.padd40, ul.padd40 li, table.padd40 td{
+	padding: 40px;
+}
 
 .paddTB2, ul.paddTB2 li, table.paddTB2 td{
     padding-top:    2px;
@@ -941,6 +946,10 @@ ul.arrow-list > li::after{
     padding-top:    20px;
     padding-bottom: 20px;
 }
+.paddTB40, ul.paddTB40 li, table.paddTB40 td{
+    padding-top:    40px;
+    padding-bottom: 40px;
+}
 .paddTB50, ul.paddTB50 li, table.paddTB50 td{
     padding-top:    50px;
     padding-bottom: 50px;
@@ -959,6 +968,10 @@ ul.arrow-list > li::after{
     padding-left:   20px;
     padding-right:  20px;
 }
+.paddLR40, ul.paddLR40 li, table.paddLR40 td{
+    padding-left:   40px;
+    padding-right:  40px;
+}
 .paddLR50, ul.paddLR50 li, table.paddLR50 td{
     padding-left:   50px;
     padding-right:  50px;
@@ -966,6 +979,38 @@ ul.arrow-list > li::after{
 
 .paddT60, ul.paddT60 li, table.paddT60 td{
     padding-top: 60px;
+}
+
+.paddT10p{
+	padding-top: 10%;
+}
+.paddT20p{
+	padding-top: 10%;
+}
+.paddT30p{
+	padding-top: 10%;
+}
+.paddT40p{
+	padding-top: 10%;
+}
+.paddT50p{
+	padding-top: 10%;
+}
+
+.paddT10vh{
+	padding-top: 10vh;
+}
+.paddT20vh{
+	padding-top: 10vh;
+}
+.paddT30vh{
+	padding-top: 10vh;
+}
+.paddT40vh{
+	padding-top: 10vh;
+}
+.paddT50vh{
+	padding-top: 10vh;
 }
 
 .marg10{

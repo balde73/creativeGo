@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	reopenNavMenu();
+
 	$("body").on('click', ".open-nav-side", function(){
 		$(" <div id='velina' class='close-nav-side Bblack op8'></div> ").appendTo("body")
 		$(".nav-side").show()
@@ -19,14 +21,12 @@ $(document).ready(function(){
 	});
 
 	// funzione dropdown su liste
-	$("li.dropdown span").click(function(event){
+	$("body").on('click', 'li.dropdown', function(event){
 		// TO DO insert animation
-		elem = $($(this)[0].parentElement)
-		elem.toggleClass("dropdown-active")
-		
+		$(this).toggleClass("dropdown-active")
 	});
 
-	$("ul.tag-selectable li").click(function(){
+	$("body").on('click', 'ul.tag-selectable li', function(){
 		elem 		= $($(this)[0].parentElement)
 		classe 		= elem.attr( "data-attr" )
 		call 		= elem.attr( "data-call" )
@@ -45,40 +45,30 @@ $(document).ready(function(){
 
 	});
 
-	$(".changer").change(function(){
-		var modifica = $(this).attr("data-attr")
-		var valore   = $(this).val()
-		if(valore && valore!=""){
-			$($($(".code-preview")[0])[0].childNodes).attr("data-"+modifica, valore)
-		}
-		else{
-			$($($(".code-preview")[0])[0].childNodes).removeAttr("data-"+modifica)
-		}
-		aggiornaCodice()
-	});
-
-
-	reopenNavMenu();
-
 	//MODAL
 	//open modal
-	$(".modal-trigger").click(function(){
-		modalID = $(this).attr("data-modal")
-		f = $(this).attr("data-function")
+	$("body").on('click', '*[modal-open]', function(){
+		modalID = $(this).attr("modal-open")
 		$("#"+modalID).show()
-		if( f ) window[f]()
+
+		//trigger function
+		callback = $(this).attr("modal-callback")
+		var x = eval(callback)
+	    if (typeof x == 'function') {
+	        x()
+	    }
 	});
 	//close modal
-	$(".modal .modal-close").click(function(){
-		console.log($(this))
-		//salgo fino a trovare un ID
-		modalID = ""
-		$elem 	= $(this)[0]
-		while( modalID == "" ){
-			$elem = $elem.parentElement
-			modalID = $elem.id
-		}
+	$("body").on('click', '*[modal-close]', function(){
+		modalID = $(this).attr("modal-close")
 		$("#"+modalID).hide()
+
+		//trigger function
+		callback = $(this).attr("modal-callback")
+		var x = eval(callback)
+	    if (typeof x == 'function') {
+	        x()
+	    }
 	});
 
 
@@ -89,10 +79,8 @@ function openOnScale( $elem, searchClass, addClass, lastClass ){
 	$parent = $elem.parentNode
 	while( $parent && !( $parent.className == lastClass ) ){
 
-		if( $parent.className == searchClass ){
+		if( $parent.className == searchClass )
 			$parent.className = $parent.className + " " + addClass
-
-		}
 
 		//continuo a salire
 		$parent = $parent.parentNode
@@ -110,23 +98,6 @@ function reopenNavMenu(){
 			openOnScale( list[0], "dropdown", "dropdown-active", "nav-ul" );
 	}
 }
-
-function copyInModal(){
-	testo 		= $("#prime-code").text()
-	html_code  	= 	'<div class="">'+
-					'	<div class="paddTB10 center">'+
-					'		Copia il codice (Ctrl+C) e chiudi'+
-					'	</div>'+
-					'	<div class="paddTB20">'+
-					'		<textarea class="padd10" rows="5"></textarea>'+
-					'	</div>'+
-					'</div>'
-
-	$("#modal-copy .modal-body").html(html_code)
-	$("#modal-copy textarea"   ).val( testo )
-								.select()
-}
-
 
 var tmpl_toast = '<div class="toast"> STRING_TOAST </div>'
 var animation_delay = 450+100
