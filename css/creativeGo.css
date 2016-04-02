@@ -557,6 +557,12 @@ ul.arrow-list > li::after{
 }
 
 
+/* TABS */
+.tabs-selectable li{
+    cursor: pointer;
+}
+
+
 /* TOAST */
 #toast-box{
     position:           fixed;
@@ -1079,6 +1085,10 @@ ul.arrow-list > li::after{
 .space-line{
     border-bottom: 1px solid gray;
     border-color:  rgba(0,0,0,.1);
+}
+
+.borderB{
+    border-bottom: 1px solid;
 }
 
 @media screen and (max-width: 620px){

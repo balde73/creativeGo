@@ -26,11 +26,11 @@ $(document).ready(function(){
 		$(this).toggleClass("dropdown-active")
 	});
 
-	$("body").on('click', 'ul.tag-selectable li', function(){
+	$("body").on('click', 'ul.tabs-selectable li', function(){
 		elem 		= $($(this)[0].parentElement)
-		classe 		= elem.attr( "data-attr" )
-		call 		= elem.attr( "data-call" )
-		call_show 	= $(this).attr( "data-link" )
+		classe 		= elem.attr( "tabs-active" )
+		call 		= elem.attr( "tabs-call" )
+		call_show 	= $(this).attr( "tab-link" )
 
 		all_li = elem[0].children;
 		for(i=0; i<all_li.length; i++){
@@ -38,10 +38,11 @@ $(document).ready(function(){
 		}
 
 		$(this).addClass(classe);
-		$("."+call).each(function(i, elem){
+
+		$("*[tabs-called = "+call+"]").each(function(i, elem){
 			$(elem).hide();
 		});
-		$("."+call_show).show();
+		$("*[tabs-called = "+call+"]."+call_show).show();
 
 	});
 
@@ -70,7 +71,6 @@ $(document).ready(function(){
 	        x()
 	    }
 	});
-
 
 });
 
