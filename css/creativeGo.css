@@ -400,14 +400,22 @@ label{
 /* BUTTON */
 .btn {
     width:              100%;
+    padding:            12px 0px;
     margin:             0 auto;
     display:            block;
     text-align:         center;
-    background-color:   rgba(0,0,0,.2);
-    box-shadow:         0 0 2px rgba(0,0,0,.2);
+    border:             1px solid rgba(0,0,0,.3);
     text-transform:     uppercase;
     cursor:             pointer;
     color:              inherit;
+}
+
+.btn-ghost{
+    border:             0;
+}
+
+.btn-color{
+    border-color:       inherit;
 }
 
 .btn-inline{
@@ -416,13 +424,9 @@ label{
     padding: 8px 16px;
 }
 
-.btn-light{
-    background:         transparent;
-    border-width:       1px;
-    border-style:       solid;
-}
-
 .btn-3d{
+    background:         white;
+    border-color:       rgba(0,0,0,.1);
     position:           relative;
     box-shadow:         none;
     width:              160px;
@@ -441,7 +445,12 @@ label{
         box-shadow:     0 2px 12px 4px rgba(0,0,0,.2);
 }
 
+.btn.btn-link{
+    padding:            0;
+}
+
 .btn a{
+    padding:            10px;
 }
 
 .btn-radius{
@@ -753,6 +762,10 @@ ul.arrow-list > li::after{
     margin-bottom:      40px;
 }
 
+.border1{
+    border:             1px solid rgba(0,0,0,.1);
+}
+
 .darker1{
     background-color: rgba(0,0,0,.2);
 }
@@ -983,6 +996,35 @@ ul.arrow-list > li::after{
 .paddT50vh{
 	padding-top: 10vh;
 }
+
+
+/* bottom */
+.paddB2, ul.paddB2 li, table.paddB2 td{
+    padding-bottom:    2px;
+}
+.paddB5, ul.paddB5 li, table.paddB5 td{
+    padding-bottom:    5px;
+}
+.paddB10, ul.paddB10 li, table.paddB10 td{
+    padding-bottom:    10px;
+}
+.paddB15, ul.paddB15 li, table.paddB15 td{
+    padding-bottom:    15px;
+}
+.paddB20, ul.paddB20 li, table.paddB20 td{
+    padding-bottom:    20px;
+}
+.paddB40, ul.paddB40 li, table.paddB40 td{
+    padding-bottom:    40px;
+}
+.paddB50, ul.paddB50 li, table.paddB50 td{
+    padding-bottom:    50px;
+}
+
+.paddB60, ul.paddB60 li, table.paddB60 td{
+    padding-bottom: 60px;
+}
+
 
 .marg10{
     margin: 10px;
