@@ -51,6 +51,9 @@ $(document).ready(function(){
 	$("body").on('click', '*[modal-open]', function(){
 		modalID = $(this).attr("modal-open")
 		$("#"+modalID).show()
+		window.setTimeout(function(){
+			$("#"+modalID).addClass("modal-opened")
+		}, 20);
 
 		//trigger function
 		callback = $(this).attr("modal-callback")
@@ -62,7 +65,10 @@ $(document).ready(function(){
 	//close modal
 	$("body").on('click', '*[modal-close]', function(){
 		modalID = $(this).attr("modal-close")
-		$("#"+modalID).hide()
+		$("#"+modalID).removeClass("modal-opened")
+		window.setTimeout(function(){
+			$("#"+modalID).hide()
+		}, 300);
 
 		//trigger function
 		callback = $(this).attr("modal-callback")
