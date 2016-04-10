@@ -250,14 +250,12 @@ h5{
 
 /* navigator */
 .nav-side{
-    position: fixed;
-    height:   100%;
-    width:    280px;
-    z-index:  100;
-}
-
-.nav-side .nav-title{
-    height:     80px;
+    display:        flex;
+    flex-direction: column;
+    position:       fixed;
+    height:         100%;
+    width:          280px;
+    z-index:        100;
 }
 
 .nav-side .nav-title a{
@@ -281,12 +279,8 @@ h5{
 }
 
 .nav-side .nav-ul{
-    overflow: auto;
-    height:   calc( 100% );
-}
-
-.has-nav-title.nav-side .nav-ul{
-    height:   calc( 100% - 80px );
+    overflow:   auto;
+    flex:       1;
 }
 
 .nav-side ul li{
@@ -539,6 +533,29 @@ ul.arrow-list > li::after{
     -webkit-transform:  rotateZ(45deg);
 }
 
+/* TOOLTIPS */
+[tooltip]{
+    position:           relative;
+}
+
+[tooltip]::before{
+    content:            "ciao";
+    height:             0;
+    opacity:            0;
+    position:           absolute;
+    bottom:             -100%;
+    left:               0;
+    font-size:          12px;
+    color:              rgb(255,255,255,.7);
+    background-color:   rgb(40,40,40);
+    padding:            6px 12px;
+    border-radius:      6px;
+}
+
+[tooltip]:hover::before{
+    height:             auto;
+    opacity:            1;
+}
 
 /* MODAL */
 .modal-container{
@@ -729,6 +746,56 @@ ul.arrow-list > li::after{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
+/* zoom animation */
+[zoom-animation]{
+    position: relative;
+}
+
+[zoom-animation]::before{
+    content:            "";
+    position:           absolute;
+    height:             4px;
+    width:              4px;
+    top:                50%;
+    left:               50%;
+    background-color:   inherit;
+    border-radius:      100px;
+    opacity:            0;
+
+    -webkit-transform:  scale(1);
+    -moz-transform:     scale(1);
+    -ms-transform:      scale(1);
+    -o-transform:       scale(1);
+    transform:          scale(1);
+
+    -webkit-transition: .7s transform, .2s opacity;
+    -moz-transition:    .7s transform, .2s opacity;
+    -ms-transition:     .7s transform, .2s opacity;
+    -o-transition:      .7s transform, .2s opacity;
+    transition:         .7s transform, .2s opacity;
+}
+
+.so-much-zoom{
+    position:           relative;
+}
+
+.so-much-zoom::before{
+    height:             100px;
+    width:              100px;
+    opacity:            1;
+    margin-left:        -50px;
+    margin-top:         -50px;
+
+    -webkit-transform:  scale(100);
+    -moz-transform:     scale(100);
+    -ms-transform:      scale(100);
+    -o-transform:       scale(100);
+    transform:          scale(100);
+}
+
+.so-much-zoom *{
+    opacity:            0;
+}
 
 /* ------ */
 #velina{

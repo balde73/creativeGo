@@ -20,6 +20,13 @@ $(document).ready(function(){
 		elem.toggleClass( class_to_toggle );
 	});
 
+	// zoom animation
+	$("body").on('click', '*[zoom-animation]', function(){
+		var elem = $(this);
+		$("body").toggleClass( "no-overflow" );
+		elem.toggleClass( "so-much-zoom" );
+	});
+
 	// funzione dropdown su liste
 	$("body").on('click', 'li.dropdown', function(event){
 		// TO DO insert animation
