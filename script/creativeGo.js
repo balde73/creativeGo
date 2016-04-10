@@ -85,7 +85,30 @@ $(document).ready(function(){
 	    }
 	});
 
+	var a = new alignController()
+	a.verticalAlign()
+
 });
+
+function alignController(){
+
+	this.height 	= 0
+	this.width 		= 0
+
+	this.init = function(){
+		this.height = window.innerWidth
+		this.width 	= window.innerHeight
+	}
+	
+	this.verticalAlign = function(){
+		$(".vertical-align").each(function(){
+			var height = this.offsetHeight
+			this.style.marginTop = -(height/2)+"px"
+		});
+	}
+
+	this.init();
+}
 
 function openOnScale( $elem, searchClass, addClass, lastClass ){
 	

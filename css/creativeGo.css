@@ -151,6 +151,13 @@ h5{
     height:     100%;
 }
 
+.vertical-align{
+    position:   absolute;
+    top:        50%;
+    left:       0;
+    width:      100%;
+}
+
 .split{
     display: inline-block;
     vertical-align: top;
@@ -1299,18 +1306,24 @@ ul.arrow-list > li::after{
 }
 .Cwhite{
     color:            white;
+    border-color:     white;
 }
 .Cblue{
     color:            #536DFE;
+    border-color:     #536DFE;
 }
 .Cyellow{
     color:            #ECFF50;
+    border-color:     #ECFF50;
 }
 .Clight-blue{
     color:            rgb(127, 179, 254);
+    border-color:     rgb(127, 179, 254);
 }
 
-
+.border-white{
+    border-color:     white;
+}
 .border-red{
     border-color:     #F85133;
 }
