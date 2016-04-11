@@ -312,9 +312,13 @@ h5{
 
 @media screen and (max-width: 620px){
     .nav-side{
-        display: none;
         left:    -100%;
+        width:   90%;
         -webkit-transition: .4s left;
+        -moz-transition:    .4s left;
+        -ms-transition:     .4s left;
+        -o-transition:      .4s left;
+        transition:         .4s left;
     }
 
     .has-nav-side{
@@ -331,9 +335,7 @@ h5{
     }
 
     .nav-side-open{
-        width:   90%;
-        left:    0;
-        display: block;
+        left:               0;
     }
 }
 
@@ -372,8 +374,6 @@ h5{
     left:       0;
     width:      100%;
 }
-
-
 
 
 

@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 	$("body").on('click', ".open-nav-side", function(){
 		$(" <div id='velina' class='close-nav-side Bblack op8'></div> ").appendTo("body")
-		$(".nav-side").show()
 		setTimeout(function(){$(".nav-side").addClass("nav-side-open")}, 20)
 	});
 
