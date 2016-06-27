@@ -127,16 +127,6 @@ h5{
 ------------------- STRUCTURE
 \* ------------------------------------------------- */
 
-.no-font-split, .split-box{
-    font-size: 0;
-}
-.split-box-middle .split{
-    vertical-align: middle;
-}
-.no-font-split > .split, .split-box > .split{
-    font-size: 16px;
-}
-
 .max-full{
     max-width:  100%;
 }
@@ -158,12 +148,38 @@ h5{
     width:      100%;
 }
 
+/* from http://yuilibrary.com/yui/docs/cssgrids/ experience */
+.split-box{
+    letter-spacing:     -0.31em;    /* Webkit: collapse white-space between units */
+    *letter-spacing:    normal;     /* reset IE < 8 */
+    *word-spacing:      -0.43em;    /* IE < 8: collapse white-space between units */
+    text-rendering:     optimizespeed;
+}
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.split-box {
+    word-spacing:       -0.43em;
+}
 .split{
-    display: inline-block;
-    vertical-align: top;
+    display:            inline-block;
+    zoom:               1;          /* IE < 8: fake inline-block */
+    *display:           inline;     /* IE < 8: fake inline-block */
+    letter-spacing:     normal;
+    word-spacing:       normal;
+    vertical-align:     top;
+    text-rendering:     auto;
+}
+.split-box-middle .split{
+    vertical-align: middle;
 }
 .split1,    .split-box-1 > .split{
 	width:  100%;
+}
+.split80p{
+    width:  80%;
 }
 .split70p{
     width:  70%;
@@ -176,6 +192,12 @@ h5{
 }
 .split40p{
     width:  40%;
+}
+.split30p{
+    width:  30%;
+}
+.split20p{
+    width:  20%;
 }
 .split3,    .split-box-3 > .split{
 	width:  33.333%;
@@ -875,7 +897,7 @@ ul.arrow-list > li::after{
     border:             0;
 }
 .border{
-    border:             1px solid rgb(0,0,0,.1);
+    border:             1px solid rgba(0,0,0,.1);
 }
 .border-bottom{
     border-bottom:      1px solid rgba(0,0,0,.1);
