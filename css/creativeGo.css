@@ -127,16 +127,6 @@ h5{
 ------------------- STRUCTURE
 \* ------------------------------------------------- */
 
-.no-font-split, .split-box{
-    font-size: 0;
-}
-.split-box-middle .split{
-    vertical-align: middle;
-}
-.no-font-split > .split, .split-box > .split{
-    font-size: 16px;
-}
-
 .max-full{
     max-width:  100%;
 }
@@ -151,12 +141,45 @@ h5{
     height:     100%;
 }
 
+.vertical-align{
+    position:   absolute;
+    top:        50%;
+    left:       0;
+    width:      100%;
+}
+
+/* from http://yuilibrary.com/yui/docs/cssgrids/ experience */
+.split-box{
+    letter-spacing:     -0.31em;    /* Webkit: collapse white-space between units */
+    *letter-spacing:    normal;     /* reset IE < 8 */
+    *word-spacing:      -0.43em;    /* IE < 8: collapse white-space between units */
+    text-rendering:     optimizespeed;
+}
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+.opera-only :-o-prefocus,
+.split-box {
+    word-spacing:       -0.43em;
+}
 .split{
-    display: inline-block;
-    vertical-align: top;
+    display:            inline-block;
+    zoom:               1;          /* IE < 8: fake inline-block */
+    *display:           inline;     /* IE < 8: fake inline-block */
+    letter-spacing:     normal;
+    word-spacing:       normal;
+    vertical-align:     top;
+    text-rendering:     auto;
+}
+.split-box-middle .split{
+    vertical-align: middle;
 }
 .split1,    .split-box-1 > .split{
 	width:  100%;
+}
+.split80p{
+    width:  80%;
 }
 .split70p{
     width:  70%;
@@ -169,6 +192,12 @@ h5{
 }
 .split40p{
     width:  40%;
+}
+.split30p{
+    width:  30%;
+}
+.split20p{
+    width:  20%;
 }
 .split3,    .split-box-3 > .split{
 	width:  33.333%;
@@ -250,14 +279,12 @@ h5{
 
 /* navigator */
 .nav-side{
-    position: fixed;
-    height:   100%;
-    width:    280px;
-    z-index:  100;
-}
-
-.nav-side .nav-title{
-    height:     80px;
+    display:        flex;
+    flex-direction: column;
+    position:       fixed;
+    height:         100%;
+    width:          280px;
+    z-index:        100;
 }
 
 .nav-side .nav-title a{
@@ -281,12 +308,8 @@ h5{
 }
 
 .nav-side .nav-ul{
-    overflow: auto;
-    height:   calc( 100% );
-}
-
-.has-nav-title.nav-side .nav-ul{
-    height:   calc( 100% - 80px );
+    overflow:   auto;
+    flex:       1;
 }
 
 .nav-side ul li{
@@ -311,9 +334,13 @@ h5{
 
 @media screen and (max-width: 620px){
     .nav-side{
-        display: none;
         left:    -100%;
+        width:   90%;
         -webkit-transition: .4s left;
+        -moz-transition:    .4s left;
+        -ms-transition:     .4s left;
+        -o-transition:      .4s left;
+        transition:         .4s left;
     }
 
     .has-nav-side{
@@ -330,9 +357,7 @@ h5{
     }
 
     .nav-side-open{
-        width:   90%;
-        left:    0;
-        display: block;
+        left:               0;
     }
 }
 
@@ -371,8 +396,6 @@ h5{
     left:       0;
     width:      100%;
 }
-
-
 
 
 
@@ -539,6 +562,29 @@ ul.arrow-list > li::after{
     -webkit-transform:  rotateZ(45deg);
 }
 
+/* TOOLTIPS */
+[tooltip]{
+    position:           relative;
+}
+
+[tooltip]::before{
+    content:            "ciao";
+    height:             0;
+    opacity:            0;
+    position:           absolute;
+    bottom:             -100%;
+    left:               0;
+    font-size:          12px;
+    color:              rgb(255,255,255,.7);
+    background-color:   rgb(40,40,40);
+    padding:            6px 12px;
+    border-radius:      6px;
+}
+
+[tooltip]:hover::before{
+    height:             auto;
+    opacity:            1;
+}
 
 /* MODAL */
 .modal-container{
@@ -729,6 +775,56 @@ ul.arrow-list > li::after{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
+/* zoom animation */
+[zoom-animation]{
+    position: relative;
+}
+
+[zoom-animation]::before{
+    content:            "";
+    position:           absolute;
+    height:             4px;
+    width:              4px;
+    top:                50%;
+    left:               50%;
+    background-color:   inherit;
+    border-radius:      100px;
+    opacity:            0;
+
+    -webkit-transform:  scale(1);
+    -moz-transform:     scale(1);
+    -ms-transform:      scale(1);
+    -o-transform:       scale(1);
+    transform:          scale(1);
+
+    -webkit-transition: .7s transform, .2s opacity;
+    -moz-transition:    .7s transform, .2s opacity;
+    -ms-transition:     .7s transform, .2s opacity;
+    -o-transition:      .7s transform, .2s opacity;
+    transition:         .7s transform, .2s opacity;
+}
+
+.so-much-zoom{
+    position:           relative;
+}
+
+.so-much-zoom::before{
+    height:             100px;
+    width:              100px;
+    opacity:            1;
+    margin-left:        -50px;
+    margin-top:         -50px;
+
+    -webkit-transform:  scale(100);
+    -moz-transform:     scale(100);
+    -ms-transform:      scale(100);
+    -o-transform:       scale(100);
+    transform:          scale(100);
+}
+
+.so-much-zoom *{
+    opacity:            0;
+}
 
 /* ------ */
 #velina{
@@ -801,7 +897,7 @@ ul.arrow-list > li::after{
     border:             0;
 }
 .border{
-    border:             1px solid rgb(0,0,0,.1);
+    border:             1px solid rgba(0,0,0,.1);
 }
 .border-bottom{
     border-bottom:      1px solid rgba(0,0,0,.1);
@@ -1232,18 +1328,24 @@ ul.arrow-list > li::after{
 }
 .Cwhite{
     color:            white;
+    border-color:     white;
 }
 .Cblue{
     color:            #536DFE;
+    border-color:     #536DFE;
 }
 .Cyellow{
     color:            #ECFF50;
+    border-color:     #ECFF50;
 }
 .Clight-blue{
     color:            rgb(127, 179, 254);
+    border-color:     rgb(127, 179, 254);
 }
 
-
+.border-white{
+    border-color:     white;
+}
 .border-red{
     border-color:     #F85133;
 }

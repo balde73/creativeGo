@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 	$("body").on('click', ".open-nav-side", function(){
 		$(" <div id='velina' class='close-nav-side Bblack op8'></div> ").appendTo("body")
-		$(".nav-side").show()
 		setTimeout(function(){$(".nav-side").addClass("nav-side-open")}, 20)
 	});
 
@@ -18,6 +17,13 @@ $(document).ready(function(){
 		var elem = $(this);
 		var class_to_toggle = elem.attr("toggle-class")
 		elem.toggleClass( class_to_toggle );
+	});
+
+	// zoom animation
+	$("body").on('click', '*[zoom-animation]', function(){
+		var elem = $(this);
+		$("body").toggleClass( "no-overflow" );
+		elem.toggleClass( "so-much-zoom" );
 	});
 
 	// funzione dropdown su liste
@@ -78,7 +84,30 @@ $(document).ready(function(){
 	    }
 	});
 
+	var a = new alignController()
+	a.verticalAlign()
+
 });
+
+function alignController(){
+
+	this.height 	= 0
+	this.width 		= 0
+
+	this.init = function(){
+		this.height = window.innerWidth
+		this.width 	= window.innerHeight
+	}
+	
+	this.verticalAlign = function(){
+		$(".vertical-align").each(function(){
+			var height = this.offsetHeight
+			this.style.marginTop = -(height/2)+"px"
+		});
+	}
+
+	this.init();
+}
 
 function openOnScale( $elem, searchClass, addClass, lastClass ){
 	
